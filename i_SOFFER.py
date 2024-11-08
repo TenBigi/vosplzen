@@ -39,6 +39,7 @@ def vykresli(x, y, n):
         t.forward(side_length)
         t.left(angle)
 
+    t.hideturtle()
     t.done()
 
 vykresli(-100, 100, 5)  
