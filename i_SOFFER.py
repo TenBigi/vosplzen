@@ -1,25 +1,44 @@
-import turtle
+import turtle as t
 
 def vykresli(x, y, n):
-    turtle.penup()
-    turtle.goto(x, y)
-    turtle.pencolor("blue")    
-    turtle.pendown()
+    t.penup()
+    t.goto(x, y)
+    t.pensize(3)
+    t.pencolor("blue")    
+    t.pendown()
     
-    turtle.write("JS", font=("Arial", 20, "bold"))
+    #"J"
+    t.forward(15)
+    t.backward(30)
+    t.forward(15)
+    t.right(90)
+    t.forward(50)
+    t.circle(-10,200)
+    t.penup()
 
-    side_length = 100 / (n * 1.5)  
+    t.goto(x + 40, y)
+    t.left(270)
+    t.pendown()
+
+    #"S"
+    t.forward(5)
+    t.backward(5)
+    t.circle(-15, -185)
+    t.circle(15, -250)
+
+
+    side_length = 100 / (n)  
     angle = 360 / n  
 
-    turtle.penup()
-    turtle.goto(x + 40, y + 5)
-    turtle.pencolor("red")  
-    turtle.pendown()
+    t.penup()
+    t.goto(x + 70, y - 25)
+    t.pencolor("red")  
+    t.pendown()
 
     for _ in range(n):
-        turtle.forward(side_length)
-        turtle.left(angle)
+        t.forward(side_length)
+        t.left(angle)
 
-    turtle.done()
+    t.done()
 
 vykresli(-100, 100, 5)  
